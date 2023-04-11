@@ -1,5 +1,6 @@
 # Prerequisites
 *.d
+*.pcm
 
 # Compiled Object files
 *.slo
@@ -13,6 +14,7 @@
 
 # Compiled Dynamic libraries
 *.so
+*.so*
 *.dylib
 *.dll
 
@@ -30,3 +32,17 @@
 *.exe
 *.out
 *.app
+calibrate
+
+# Input and output files
+*.root
+*.eps
+*.png
+*.dat
+*.txt
+*.pdf
+*.log
+
+# CMake
+!CMakeLists.txt
+/build

@@ -33,6 +33,7 @@
 *.out
 *.app
 calibrate
+peak_finder
 
 # Input and output files
 *.root

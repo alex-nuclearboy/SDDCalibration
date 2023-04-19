@@ -23,14 +23,10 @@ int main(int argc, char *argv[])
   int bus_number = std::stoi(argv[2]);
   int sdd_number = std::stoi(argv[3]);
   std::string output_file_name = input_root_file_name.substr(7, 23);
-  std::string output_image_file = \
-      std::string("plots/pf_") + output_file_name + std::string("_bus") \
-      + std::string(argv[2]) + std::string("_sdd") + std::string(argv[3]) \
-      + std::string(".png");
-
+  
   SDDCalibration pf(input_root_file);  
-  pf.DrawHistogram(bus_number, sdd_number, output_image_file);
-
+  pf.DrawHistogram(bus_number, sdd_number, output_file_name);
+  
   std::cout << "End." << std::endl;
 
   app.Run();

@@ -11,8 +11,11 @@ public:
   SDDCalibration(const std::string &filename);
   ~SDDCalibration();
 
-  void    DrawHistogram(int bus, int sdd, const std::string &output_file);  
-  void    PreFitPeaks(std::string input_file, std::string output_file);
+  void          DrawHistogram(int bus, int sdd, const std::string &output_file);  
+  void          PreFitPeaks(std::string input_file, std::string output_file);
+  void          Calibrate(
+                    std::string &input_file, std::string &input_par, 
+                    int &bus_num, int &sdd_num);
 
 private:
   TFile *root_file;
@@ -28,13 +31,17 @@ private:
     double position;
   };
 
-  TH1D    *GetHistogram(int bus, int sdd);
+  TH1D                    *GetHistogram(int bus, int sdd);
   std::vector<double>     SearchPeaks(
                               int bus, int sdd, TH1D *&hist, 
                               const std::string &output_file);
   std::vector<int>        GetPeakPositions(
                               int bus_num, int sdd_num, 
-                              const std::string &file_name);                                
+                              const std::string &file_name);
+  std::vector<double>     GetParams(
+                              int bus_num, int sdd_num, 
+                              const std::string &input_par);
+  void                    FitSpectrum(TH1D *hist);
 };
 
 #endif

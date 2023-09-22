@@ -62,7 +62,7 @@ To automatically locate peaks within one selected spectrum, please execute the f
 
     ./peak_finder <ROOT file name> <bus number> <sdd number>
 
-Replace <ROOT file name> with the name of the analysed ROOT file, <bus number> with the bus number, and <SDD number> with the SDD number. 
+Replace \<ROOT file name> with the name of the analysed ROOT file, \<bus number> with the bus number, and \<SDD number> with the SDD number. 
 This command will identify and list all the peaks detected in the spectrum.
 The procedure will also display a histogram with the spectrum, highlighting the detected peaks (see the example below).
 
@@ -95,7 +95,8 @@ To perform a quick preliminary calibration of the spectra, please execute the fo
 
     ./precalibration <ROOT file name> <peaks file name>
 
-Replace <ROOT file name> with the name of the ROOT file, and <peaks file name> with the name of the file containing peak positions. This file should be the output of the peak finder procedure from the previous step and should correspond to the analysed ROOT file.
+Replace \<ROOT file name> with the name of the ROOT file, and \<peaks file name> with the name of the file containing peak positions. 
+This file should be the output of the peak finder procedure from the previous step and should correspond to the analysed ROOT file.
 
 The prelimiary calibration will generate a table containing initial parameters required for the main calibration procedure.
 
@@ -105,7 +106,7 @@ To launch the main fitting procedure, please execute the following command:
 
     ./calibration <ROOT file name> <initial parameters file name>
 
-Replace <ROOT file name> with the name of the analysed ROOT file, and <initial parameters file name> with the name of the correspondence file containing the initial parameters.
+Replace \<ROOT file name> with the name of the analysed ROOT file, and \<initial parameters file name> with the name of the correspondence file containing the initial parameters.
 
 This command will begin the fitting procedure that uses MINUIT and is initiated by calling the MIGRAD function. 
 The procedure involves fitting the spectra using a Gaussian and Tail function combination to precisely determine the peak positions. 

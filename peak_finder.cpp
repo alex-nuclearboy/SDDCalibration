@@ -3,6 +3,8 @@
 
 #include "TApplication.h"
 
+std::string CheckExtension(const std::string& filename);
+
 int main(int argc, char *argv[]) 
 {
   if (argc != 4) {
@@ -15,16 +17,14 @@ int main(int argc, char *argv[])
 
   std::cout << "Starting the Peak Finder program..." << std::endl;
   std::cout << std::endl;
-
-  std::string input_root_file_name = argv[1];
-  std::string input_root_file = 
-      "/home/aleks/SIDDHARTA2/SpectrumAnalyser/output/rootfiles/" + \
-      input_root_file_name;
-  int bus_number = std::stoi(argv[2]);
-  int sdd_number = std::stoi(argv[3]);
-  std::string output_file_name = input_root_file_name.substr(7, 23);
+  const std::string data_directory  = "${XRAYSPECTRA}";
+  const std::string input_file_name = CheckExtension(argv[1]);
+  const std::string input_file_path = data_directory + "/" + input_file_name;
+  const int bus_number = std::stoi(argv[2]);
+  const int sdd_number = std::stoi(argv[3]);
+  const std::string output_file_name = input_file_name.substr(7, 23);
   
-  SDDCalibration pf(input_root_file);  
+  SDDCalibration pf(input_file_path);  
   pf.DrawHistogram(bus_number, sdd_number, output_file_name);
   
   std::cout << "End." << std::endl;
@@ -32,4 +32,11 @@ int main(int argc, char *argv[])
   app.Run();
 
   return 0;
+}
+
+std::string CheckExtension(const std::string& filename) {
+  if (filename.substr(filename.size() - 5) != ".root") {
+    return filename + ".root";
+  }
+  return filename;
 }

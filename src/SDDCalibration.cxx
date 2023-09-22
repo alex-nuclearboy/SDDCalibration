@@ -1,3 +1,16 @@
+/*
+* File:         SDDCalibration.cxx
+* Author:       Aleksander Khreptak <aleksander.khreptak@lnf.infn.it>
+* Created:      31 Mar 2023
+* Last updated: 22 Sep 2023
+*
+* Description:
+* This file implements an SDDCalibration class that is used 
+* for the calibration of SDDs for the SIDDHARTA-2 experiment
+*/
+
+#define SDDCALIBRATION_CXX
+
 #include "../include/SDDCalibration.h"
 
 #include <iostream>

@@ -58,7 +58,7 @@ Replace \<ROOT file name> with the name of the analysed ROOT file, \<bus number>
 This command will identify and list all the peaks detected in the spectrum.
 The procedure will also display a histogram with the spectrum, highlighting the detected peaks (see the example below).
 
-<img src="examples/eg_adc_spec_pf_bus2_sdd17.png" alt="SDD Spectrum" width="300" height="200">
+<img src="examples/eg_adc_spec_pf_bus2_sdd17.png" alt="SDD Spectrum" width="450" height="150">
 
 After identifying the peaks, create a text file with the same name as the input ROOT file and add the .txt extension. 
 From the list of detected peaks, select the 12 most intense peaks. Organize and write them in this text file, adhering to the following order: 
@@ -87,7 +87,8 @@ To perform a quick preliminary calibration of the spectra, please execute the fo
 
     ./precalibration <ROOT file name> <peaks file name>
 
-Replace <ROOT file name> with the name of the ROOT file, and <peaks file name> with the name of the file containing peak positions. This file should be the output of the peak finder procedure from the previous step and should correspond to the analysed ROOT file.
+Replace \<ROOT file name> with the name of the ROOT file, and \<peaks file name> with the name of the file containing peak positions. 
+This file should be the output of the peak finder procedure from the previous step and should correspond to the analysed ROOT file.
 
 The prelimiary calibration will generate a table containing initial parameters required for the main calibration procedure.
 
@@ -97,7 +98,7 @@ To launch the main fitting procedure, please execute the following command:
 
     ./calibration <ROOT file name> <initial parameters file name>
 
-Replace <ROOT file name> with the name of the analysed ROOT file, and <initial parameters file name> with the name of the correspondence file containing the initial parameters.
+Replace \<ROOT file name> with the name of the analysed ROOT file, and \<initial parameters file name> with the name of the correspondence file containing the initial parameters.
 
 This command will begin the fitting procedure that uses MINUIT and is initiated by calling the MIGRAD function. 
 The procedure involves fitting the spectra using a Gaussian and Tail function combination to precisely determine the peak positions. 

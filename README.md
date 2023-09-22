@@ -15,13 +15,21 @@ This software package includes functionalities to find peaks on SDD spectra, con
 
 ## Required software
 
+To use the software provided in this repository, it is imperative to have the following software programs installed:
+
 A data analysis framework:
 
-    ROOT 
+    ROOT
+
+(Version 6 or higher)
 
 Cross-platform build-system generator:
 
     CMake
+
+ (Version 3 or higher)
+
+ The software is compliant with the C++17 standard.
 
 ## Necessary environment variables
 

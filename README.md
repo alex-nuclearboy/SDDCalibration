@@ -58,7 +58,7 @@ Replace \<ROOT file name> with the name of the analysed ROOT file, \<bus number>
 This command will identify and list all the peaks detected in the spectrum.
 The procedure will also display a histogram with the spectrum, highlighting the detected peaks (see the example below).
 
-<img src="examples/eg_adc_spec_pf_bus2_sdd17.png" alt="SDD Spectrum" width="450" height="150">
+<img src="examples/eg_adc_spec_pf_bus2_sdd17.png" alt="SDD Spectrum" width="450" height="300">
 
 After identifying the peaks, create a text file with the same name as the input ROOT file and add the .txt extension. 
 From the list of detected peaks, select the 12 most intense peaks. Organize and write them in this text file, adhering to the following order: 

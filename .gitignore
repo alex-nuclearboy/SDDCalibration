@@ -44,6 +44,7 @@ prefit
 *.txt
 *.pdf
 *.log
+!/examples/*.png
 
 # CMake
 !CMakeLists.txt

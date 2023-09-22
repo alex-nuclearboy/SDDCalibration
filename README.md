@@ -54,7 +54,7 @@ To automatically locate peaks within one selected spectrum, please execute the f
 
     ./peak_finder <ROOT file name> <bus number> <sdd number>
 
-Replace <ROOT file name> with the name of the analysed ROOT file, <bus number> with the bus number, and <SDD number> with the SDD number. 
+Replace \<ROOT file name> with the name of the analysed ROOT file, \<bus number> with the bus number, and \<SDD number> with the SDD number. 
 This command will identify and list all the peaks detected in the spectrum.
 The procedure will also display a histogram with the spectrum, highlighting the detected peaks (see the example below).
 

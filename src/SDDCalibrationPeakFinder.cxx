@@ -28,7 +28,7 @@ std::vector<double> SDDCalibration::SearchPeaks(
   hist->GetXaxis()->SetRangeUser(1500, 4500);
   hist->GetYaxis()->SetTitle(Form("counts / %d channels", rebin_factor));
 
-  const int npeaks = 14; // Desired number of peaks
+  const int npeaks = 10; // Desired number of peaks
   TSpectrum spectrum(40);
   float threshold = 0.04;
   int nfound = 0;
@@ -142,7 +142,7 @@ std::vector<double> SDDCalibration::SearchPeaks(
       + std::string(".txt");
   std::ofstream output_txt_file(output_file_name);
   // Write the peak positions to the output file
-  output_txt_file << "Desired peaks: " << std::endl;
+  output_txt_file << "Desired 10 peaks: " << std::endl;
   output_txt_file << bus << "\t" << sdd << "\t" << line_TiKa1.position 
               << "\t" << line_CuKa1.position << "\t" << line_TiKb1.position 
               << "\t" << line_CuKb1.position;

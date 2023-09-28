@@ -69,24 +69,28 @@ The procedure will also display a histogram with the spectrum, highlighting the 
 <img src="examples/eg_adc_spec_pf_bus2_sdd17.png" alt="SDD Spectrum" width="450" height="300">
 
 After identifying the peaks, create a text file with the same name as the input ROOT file and add the .txt extension. 
-From the list of detected peaks, select the 12 most intense peaks. Organize and write them in this text file, adhering to the following order: 
+From the list of detected peaks, select the 10 most intense peaks. Organize and write them in this text file, adhering to the following order: 
 
-    <bus> <sdd> <Ti Kα> <Cu Kα> <Ti Kβ> <Cu Kβ> <Remaining 8 peaks>
+    <bus> <sdd> <Ti Kα> <Cu Kα> <Ti Kβ> <Cu Kβ> <Remaining 6 peaks>
 
 Sequentially execute this procedure for each SDD and write the positions of the identified peaks in each subsequent line of the file.
 
 For example:
 
-    1   1  2210  3378  2354  3662  4302  1546  1614  2818  1714  4106  1682  3894
-    1   2  2150  3338  2290  3630  4286  2762  3858  3894  4498  1558  2586  2614
-    1   4  2102  3262  2238  3546  4182  3802  4342  2710  2562  4466  3858  1838
+    1   1  2210  3378  2354  3662  4302  1546  1614  2818  1714  4106 
+    1   2  2150  3338  2290  3630  4286  2762  3858  3894  4498  1558
+    1   4  2102  3262  2238  3546  4182  3802  4342  2710  2562  4466
 
     ...
 
-    2  17  1990  3098  2122  3370  2582  3978  2426  3494  4490  3590  2810  1618
+    2  17  1990  3098  2122  3370  2582  3978  2426  3494  4490  3590
 
     ...
 
+**Important:** After creating and filling the file, place it in the following directory:
+
+    output/precalibration/parameters
+This ensures the software can access it for subsequent steps. 
 This structured data table will prove valuable for subsequent analysis.
 
 ### Preliminary Calibration

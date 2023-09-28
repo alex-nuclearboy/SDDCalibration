@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
       input_root_file_name;
   std::string input_peaks_file_name = argv[2];
   std::string input_peaks_file = 
-      "output/precalibration/peaks/" + input_peaks_file_name;  
+      "output/precalibration/parameters/" + input_peaks_file_name;  
   std::string output_file_name = input_root_file_name.substr(7, 23);
 
   SDDCalibration ff(input_root_file);  

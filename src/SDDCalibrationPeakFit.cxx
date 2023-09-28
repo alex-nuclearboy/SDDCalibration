@@ -51,8 +51,8 @@ void SDDCalibration::PreFitPeaks(
                     + ".txt").c_str()); 
 
   // Loop over all bus and SDD combinations
-  for (int bus = 2; bus < 3; ++bus) {
-    for (int sdd = 1; sdd < 21; ++sdd) {
+  for (int bus = 1; bus < 2; ++bus) {
+    for (int sdd = 1; sdd < 65; ++sdd) {
       // Get peak positions for the current bus and SDD
       std::vector<int> peak_positions = GetPeakPositions(bus, sdd, input_file);
       if (peak_positions.empty()) {

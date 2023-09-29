@@ -103,7 +103,11 @@ To perform a quick preliminary calibration of the spectra, please execute the fo
 Replace `<ROOT file name>` with the name of the ROOT file, and `<peaks file name>` with the name of the file containing peak positions. 
 This file should be the output of the peak finder procedure from the previous step and should correspond to the analysed ROOT file.
 
-The prelimiary calibration will generate a table containing initial parameters required for the main calibration procedure.
+The prelimiary calibration will generate a table containing initial parameters required for the main calibration procedure. 
+
+An example of a histogram after the preliminary fitting procedure:
+
+<img src="examples/eg_adc_spec_prefit_bus1_sdd30.png" alt="SDD Spectrum" width="450" height="300">
 
 ### Main Fitting Procedure
 

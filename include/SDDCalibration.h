@@ -16,6 +16,7 @@ public:
   void          Calibrate(
                     std::string &input_file, std::string &input_par, 
                     int &bus_num, int &sdd_num);
+  void           PrintParams(const std::string &input_par);
 
 private:
   TFile *root_file;

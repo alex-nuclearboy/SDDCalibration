@@ -35,6 +35,7 @@
 calibrate
 peak_finder
 prefit
+calibration
 
 # Input and output files
 *.root

@@ -27,9 +27,15 @@ add_executable(prefit
     src/SDDCalibrationPeakFit.cxx
     prefit.cpp)
 
+add_executable(calibration 
+    src/SDDCalibration.cxx
+    src/SDDCalibrationMainFit.cxx
+    calibration.cpp)
+
 # Link ROOT libraries
 target_link_libraries(peak_finder PRIVATE ${ROOT_LIBRARIES})
 target_link_libraries(prefit PRIVATE ${ROOT_LIBRARIES})
+target_link_libraries(calibration PRIVATE ${ROOT_LIBRARIES})
 
 # Set output directory
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR})
@@ -37,3 +43,4 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR})
 # Additional compile options
 add_compile_options(peak_finder PRIVATE -Wall -Wextra -pedantic)
 add_compile_options(prefit PRIVATE -Wall -Wextra -pedantic)
+add_compile_options(calibration PRIVATE -Wall -Wextra -pedantic)
